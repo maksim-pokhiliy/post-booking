@@ -1,0 +1,52 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": ["react"],
+    "rules": {
+      "linebreak-style": ["error", "unix"],
+      "quotes": ["error", "double"],
+      "semi": ["error", "always"],
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error",
+      "react/react-in-jsx-scope": "off", // Отключено правило 'React' must be in scope when using JSX
+      "react/prop-types": "off",
+      "react/display-name": "error",
+      "no-console": "warn",
+      "no-unused-vars": "warn",
+      "no-extra-parens": "error",
+      "no-useless-constructor": "error",
+      "no-useless-rename": "error",
+      "prefer-arrow-callback": "error",
+      "prefer-numeric-literals": "error",
+      "prefer-rest-params": "error",
+      "prefer-spread": "error",
+      "prefer-destructuring": "off",
+      "react/jsx-closing-bracket-location": "off",
+      "react/jsx-curly-brace-presence": ["warn", { "children": "never", "props": "always" }],
+      "react/jsx-equals-spacing": ["error", "never"],
+      "react/jsx-first-prop-new-line": ["error", "multiline"],
+      "react/jsx-indent": ["error", 2],
+      "react/jsx-indent-props": ["error", 2],
+      "react/jsx-max-props-per-line": ["error", { "maximum": 1, "when": "multiline" }],
+      "react/jsx-props-no-multi-spaces": "error",
+      "react/jsx-tag-spacing": ["error", {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never",
+        "beforeClosing": "never"
+      }],
+      "indent": ["error", 2, { "ignoredNodes": ["JSXElement *"] }]
+    }
+  }
+  

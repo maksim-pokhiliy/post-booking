@@ -1,0 +1,105 @@
+@import "./variables.scss";
+
+// FONTS
+@mixin font-sm {
+  font-size: 8px !important;
+  line-height: 14px !important;
+}
+
+@mixin font-base {
+  font-size: 14px !important;
+  line-height: 24px !important;
+}
+
+@mixin font-lg {
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+@mixin font-xl {
+  font-size: 18px !important;
+  line-height: 28px !important;
+}
+
+@mixin font-2xl {
+  font-size: 24px !important;
+  line-height: 30px !important;
+}
+
+@mixin font-3xl {
+  font-size: 32px !important;
+  line-height: 40px !important;
+}
+
+@mixin font-4xl {
+  font-size: 40px !important;
+  line-height: 50px !important;
+}
+
+// BREAK POINTS
+@mixin mobile-sm {
+  @media screen and (min-width: $mobile-sm-width) {
+    @content;
+  }
+}
+
+@mixin mobile-base {
+  @media screen and (min-width: $mobile-base-width) {
+    @content;
+  }
+}
+
+@mixin mobile-md {
+  @media screen and (min-width: $mobile-md-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: $laptop-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+// LAYOUT
+@mixin main-layout-adaptive-container {
+  padding: 40px;
+  box-sizing: border-box;
+  @include transition(padding);
+
+  @include tablet {
+    padding: 80px;
+  }
+
+  @include laptop {
+    padding: 80px 160px;
+  }
+
+  @include desktop {
+    padding: 80px 400px;
+  }
+}
+
+// OTHER
+@mixin transition($properties...) {
+  $transition: ();
+
+  @each $property in $properties {
+    $transition: append($transition, $property 0.3s ease-in-out, comma);
+  }
+
+  transition: $transition;
+  will-change: $properties;
+}

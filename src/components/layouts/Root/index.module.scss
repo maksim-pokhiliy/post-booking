@@ -1,0 +1,16 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.container {
+  width: 100vw;
+  min-height: calc(100vh - $footer-height);
+  display: flex;
+  padding-top: $header-height;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  min-height: 100%;
+  flex: 1;
+}

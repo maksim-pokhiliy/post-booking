@@ -1,0 +1,11 @@
+@import "../../../styles/variables.scss";
+
+.icon {
+  transition: all 0.3s ease-in-out;
+
+  path,
+  rect {
+    transition: all 0.3s ease-in-out;
+    fill: $background-dark;
+  }
+}
