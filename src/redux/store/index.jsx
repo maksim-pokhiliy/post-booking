@@ -1,17 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { reducer } from "../reducer";
+import {
+  combineReducers,
+  configureStore,
+  getDefaultMiddleware,
+} from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
-// import {
-//   persistStore,
-//   persistReducer,
-//   FLUSH,
-//   REHYDRATE,
-//   PAUSE,
-//   PERSIST,
-//   PURGE,
-//   REGISTER,
-// } from "redux-persist";
-import { buildGetDefaultMiddleware } from "@reduxjs/toolkit/dist/getDefaultMiddleware";
+import { persistStore, persistReducer } from "redux-persist";
+import { sessionReducer } from "../reducer/session";
+
+const rootReducer = combineReducers({
+  session: sessionReducer,
+});
 
 const persistConfig = {
   key: "root",
@@ -19,10 +17,16 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, reducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ["yourIgnoredActionType"],
+      },
+    }),
 });
 
 const persistor = persistStore(store);

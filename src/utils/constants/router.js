@@ -1,11 +1,11 @@
 // CONSTANTS
+import Home from "../../components/pages/Home";
+import Login from "../../components/pages/Login";
 import { LOGIN, ROOT } from "./routes";
-import Home from "../../pages/home";
-import Login from "../../pages/login";
 
 const PUBLIC_ROUTES = {
-  [ROOT]: { element: Home },
-  [LOGIN]: { element: Login },
+  [ROOT]: { element: Home, layout: "main" },
+  [LOGIN]: { element: Login, layout: "main" },
 };
 
 const PRIVATE_ROUTES = {};

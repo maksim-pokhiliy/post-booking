@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 
-const LoginLayout = () => {
+const Login = () => {
   return (
     <div className={styles.block} style={{ color: "red" }}>
       fdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdffdfdfdfdf
@@ -8,4 +8,4 @@ const LoginLayout = () => {
   );
 };
 
-export default LoginLayout;
+export default Login;
