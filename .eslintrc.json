@@ -14,12 +14,12 @@
     },
     "plugins": ["react"],
     "rules": {
-      "linebreak-style": ["error", "unix"],
+      "linebreak-style": "off",
       "quotes": ["error", "double"],
       "semi": ["error", "always"],
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
-      "react/react-in-jsx-scope": "off", // Отключено правило 'React' must be in scope when using JSX
+      "react/react-in-jsx-scope": "off", 
       "react/prop-types": "off",
       "react/display-name": "error",
       "no-console": "warn",

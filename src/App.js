@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { ROOT } from "./utils/constants/routes";
 import useCurrentRoutes from "./hooks/useCurrentRoutes";
+import RootLayout from "./components/layouts/Root";
 
 function App() {
   const { routes } = useCurrentRoutes();
@@ -15,8 +16,19 @@ function App() {
     <Router>
       <Routes>
         {Object.entries(routes).map(([routeKey, route]) => {
-          const { element: Element } = route;
-          return <Route key={routeKey} path={routeKey} element={<Element />} />;
+          const { element: Element, layout } = route;
+
+          return (
+            <Route
+              key={routeKey}
+              path={routeKey}
+              element={
+                <RootLayout type={layout}>
+                  <Element />
+                </RootLayout>
+              }
+            />
+          );
         })}
         <Route path={"*"} element={<Navigate to={ROOT} />} />
       </Routes>
