@@ -23,6 +23,7 @@ const Header = ({ transparent = false }) => {
         <Link className={styles.logo} to={"/"}>
           <img className={styles.logoIcon} src={logo} />
         </Link>
+
         <Link className={styles.logoFull} to={"/"}>
           <img className={styles.logoIcon} src={logoFull} />
         </Link>

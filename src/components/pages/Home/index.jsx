@@ -6,6 +6,7 @@ import image2 from "../../../assets/images/home-navigation/image-2.jpg";
 import image3 from "../../../assets/images/home-navigation/image-3.jpg";
 import image4 from "../../../assets/images/home-navigation/image-4.jpg";
 
+
 import home from "../../../assets/icons/menu/home.svg";
 import expedition from "../../../assets/icons/menu/expedition.svg";
 import details from "../../../assets/icons/menu/details.svg";
@@ -18,6 +19,7 @@ const Home = () => {
     <>
       <div className={styles.block}>
         <div className={styles.hero}>
+
           <div className={styles.navigation}>
             <div className={styles.navigationList}>
               <Link className={styles.navigationItem}>
@@ -84,6 +86,7 @@ const Home = () => {
               your holiday.
             </p>
 
+
             <div className={styles.sitemap}>
               <Link
                 className={styles.sitemapLink}
@@ -100,6 +103,7 @@ const Home = () => {
                 </div>
               </Link>
               <Link
+
                 className={styles.sitemapLink}
                 style={{ backgroundImage: `url(${image2})` }}
               >
