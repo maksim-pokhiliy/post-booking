@@ -13,7 +13,7 @@ const TextInput = ({
 }) => {
   return (
     <label className={styles.label} style={{ marginTop: title ? 55 : 22 }}>
-      {title && (
+      {title && 
         <p
           className={classNames(styles.title, {
             [styles.titleLight]: theme === "light",
@@ -21,7 +21,7 @@ const TextInput = ({
         >
           {title}
         </p>
-      )}
+      }
 
       <input
         value={value}
