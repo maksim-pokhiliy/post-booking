@@ -4,10 +4,17 @@ import { Link } from "react-router-dom";
 
 import logo from "../../../assets/icons/logo.png";
 import logoFull from "../../../assets/icons/logo-full.png";
+import notification from "../../../assets/icons/notification.svg";
+import menu from "../../../assets/icons/menu.svg";
+import close from "../../../assets/icons/close.svg";
+import home from "../../../assets/icons/menu/home.svg";
+import details from "../../../assets/icons/menu/details.svg";
+import expedition from "../../../assets/icons/menu/expedition.svg";
+import sailing from "../../../assets/icons/menu/sailing.svg";
+import logout from "../../../assets/icons/logout.svg";
 
 import classNames from "classnames";
 import { useSelector } from "react-redux";
-import SvgIcon from "../../shared/SvgIcon";
 
 const Header = ({ transparent = false }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +25,7 @@ const Header = ({ transparent = false }) => {
       className={classNames(styles.header, {
         [styles.headerTransparent]: transparent,
       })}
-      >
+    >
       <div className={styles.container}>
         <Link className={styles.logo} to={"/"}>
           <img className={styles.logoIcon} src={logo} />
@@ -34,14 +41,14 @@ const Header = ({ transparent = false }) => {
           })}
         >
           <button className={styles.notification}>
-            <SvgIcon className={styles.notificationIcon} type={"nofication"} />
+            <img className={styles.notificationIcon} src={notification} />
             <div className={styles.notificationCounter}>1</div>
           </button>
           <button
             className={styles.openMenu}
             onClick={() => setIsOpen(!isOpen)}
           >
-            <SvgIcon className={styles.openMenuIcon} type={"menu"} />
+            <img className={styles.openMenuIcon} src={menu} />
           </button>
         </div>
         <div
@@ -57,41 +64,32 @@ const Header = ({ transparent = false }) => {
               className={styles.closeMenu}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <SvgIcon className={styles.closeMenuIcon} type={"close"} />
+              <img className={styles.closeMenuIcon} src={close} />
             </button>
           </div>
 
           <ul className={styles.modalMenu}>
             <li className={styles.modalMenuItem}>
               <Link className={styles.modalMenuButton}>
-                <SvgIcon className={styles.modalMenuButtonIcon} type={"home"} />
+                <img className={styles.modalMenuButtonIcon} src={home} />
                 Home
               </Link>
             </li>
             <li className={styles.modalMenuItem}>
               <Link className={styles.modalMenuButton}>
-                <SvgIcon
-                  className={styles.modalMenuButtonIcon}
-                  type={"expedition"}
-                />
+                <img className={styles.modalMenuButtonIcon} src={expedition} />
                 YOUR EXPEDITION
               </Link>
             </li>
             <li className={styles.modalMenuItem}>
               <Link className={styles.modalMenuButton}>
-                <SvgIcon
-                  className={styles.modalMenuButtonIcon}
-                  type={"details"}
-                />
+                <img className={styles.modalMenuButtonIcon} src={details} />
                 GUEST DETAILS
               </Link>
             </li>
             <li className={styles.modalMenuItem}>
               <Link className={styles.modalMenuButton}>
-                <SvgIcon
-                  className={styles.modalMenuButtonIcon}
-                  type={"sailing"}
-                />
+                <img className={styles.modalMenuButtonIcon} src={sailing} />
                 ENHANCED SAILING
               </Link>
             </li>
@@ -99,7 +97,7 @@ const Header = ({ transparent = false }) => {
 
           <div className={styles.logout}>
             <button className={styles.logoutButton}>
-              <SvgIcon className={styles.logoutButtonIcon} type={"logout"} />
+              <img className={styles.logoutButtonIcon} src={logout} />
               Logout
             </button>
           </div>

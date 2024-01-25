@@ -7,6 +7,8 @@ import { ReactComponent as Home } from "../../../assets/icons/menu/home.svg";
 import { ReactComponent as Expedition } from "../../../assets/icons/menu/expedition.svg";
 import { ReactComponent as Sailing } from "../../../assets/icons/menu/sailing.svg";
 import { ReactComponent as Logout } from "../../../assets/icons/logout.svg";
+import { ReactComponent as Minus } from "../../../assets/icons/minus.svg";
+import { ReactComponent as Plus } from "../../../assets/icons/plus.svg";
 
 import styles from "./index.module.scss";
 
@@ -19,6 +21,8 @@ const BASE = {
   expedition: Expedition,
   sailing: Sailing,
   logout: Logout,
+  minus: Minus,
+  plus: Plus,
 };
 
 const SVG_BY_TYPE = {

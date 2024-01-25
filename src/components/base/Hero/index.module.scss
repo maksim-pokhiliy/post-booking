@@ -1,50 +1,36 @@
 @import "../../../styles/variables.scss";
-
 @import "../../../styles/mixins.scss";
 
-.footer {
-  width: 100%;
-  padding-top: 100px;
+.hero {
+  background: url("../../../assets/images/background-home.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 225px;
 
-  &Block {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    background: $white;
-
-    @include laptop {
-      position: static;
-      background: $dark-blue;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 180px;
-    }
-  }
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 
   @include laptop {
-    padding: 0;
+    height: 350px;
   }
+}
 
-  &Logo {
-    display: none;
+.navigation {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  transform: translateY(50%);
 
-    @include laptop {
-      display: block;
-    }
+  @include laptop {
+    display: flex;
   }
 
   &List {
     display: flex;
-    align-items: flex-end;
     gap: 2px;
-
-    @include laptop {
-      display: none;
-    }
+    background: $white;
   }
 
   &Item {
@@ -52,10 +38,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 25%;
+    width: 200px;
     background: $dark-blue;
     padding: 16px 11px 12px 11px;
-    height: 90px;
 
     cursor: pointer;
 

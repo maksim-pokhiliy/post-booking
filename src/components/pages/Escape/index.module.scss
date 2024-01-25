@@ -1,0 +1,466 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+
+  @include main-layout-adaptive-container;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-38px);
+
+  @include laptop {
+    margin-top: 100px;
+    transform: translateY(0);
+  }
+
+  @include desktop {
+    margin-top: 100px;
+    transform: translateY(0);
+  }
+}
+
+.polar {
+  margin-left: auto;
+  @include laptop {
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+  }
+}
+
+.title {
+  color: $dark-blue;
+  font-size: 26px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  @include laptop {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  @include desktop {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.bookingId {
+  color: $teal;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23px;
+
+  @include laptop {
+    text-align: center;
+  }
+
+  @include desktop {
+    text-align: center;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+
+  @include tablet {
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $tablet-width;
+  }
+  @include laptop {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  @include desktop {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  @include tablet {
+    width: 45%;
+  }
+
+  @include laptop {
+    width: 45%;
+  }
+  @include desktop {
+    width: 45%;
+  }
+
+  &Item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &Title {
+      color: $background-dark;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 23px;
+    }
+
+    &Value {
+      color: $light;
+      text-align: right;
+      font-family: "Poppins";
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 23px;
+    }
+  }
+}
+
+.balances {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  @include tablet {
+    width: 45%;
+  }
+
+  &Item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &Title {
+      color: $background-dark;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 23px;
+    }
+
+    &Value {
+      color: $light;
+      text-align: right;
+      font-family: "Poppins";
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 23px;
+    }
+  }
+}
+
+.cabins {
+  margin-top: 70px;
+
+  &Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &Text {
+      color: $background-dark;
+      font-size: 26px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    &Link {
+      color: $teal;
+      text-align: right;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 23px;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+    }
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+
+    @include laptop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &Item {
+    @include laptop {
+      width: calc((100% - 20px) / 2);
+    }
+
+    @include desktop {
+      width: calc((100% - 20px) / 2);
+    }
+  }
+
+  &Image {
+    position: relative;
+    width: 100%;
+  }
+
+  &Img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &Suite {
+    background: $light-cream;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 7px 12px;
+
+    color: $background-dark;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  &Guest {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 12px;
+
+    &Item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px;
+      border: 2px solid $teal;
+    }
+
+    &Date,
+    &Name {
+      color: $background-dark;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 23px;
+    }
+
+    &Edit {
+      color: $teal;
+      text-align: right;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 23px;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.expedition {
+  margin-top: 60px;
+
+  &Title {
+    color: $background-dark;
+    font-size: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &Second {
+    color: $background-dark;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+
+  &Description {
+    color: $text-silver;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 25px;
+  }
+
+  &List {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &Head {
+    &Date,
+    &Location {
+      color: $background-dark;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+
+  &Body {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    &Content {
+      @include tablet {
+        width: 50%;
+      }
+    }
+
+    &Image {
+      width: 100%;
+
+      @include tablet {
+        width: 50%;
+      }
+    }
+
+    &Img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &Departs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-bottom: 30px;
+
+      @include laptop {
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      &Text {
+        color: $background-dark;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 23px;
+      }
+
+      &Value {
+        color: $light;
+        text-align: right;
+        font-family: "Poppins";
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 23px;
+      }
+    }
+
+    &Description {
+      color: $text-silver;
+      font-family: "Poppins";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
+
+.sailing {
+  margin-top: 55px;
+
+  &Title {
+    color: $background-dark;
+    font-size: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &Second {
+    color: $text-silver;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 18px;
+  }
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+
+    @include laptop {
+      gap: 18px;
+    }
+  }
+
+  &Item {
+    width: calc((100% - 14px) / 2);
+
+    @include laptop {
+      width: calc((100% - 36px) / 3);
+    }
+  }
+
+  &Image {
+    position: relative;
+    width: 100%;
+  }
+
+  &Img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @include tablet {
+      max-height: 223px;
+    }
+
+    @include laptop {
+      max-height: 223px;
+    }
+  }
+
+  &Excursion {
+    background: $light-cream;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 7px 12px;
+    max-width: 50%;
+
+    color: $background-dark;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  &Title {
+    color: $background-dark;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 16px;
+  }
+}
