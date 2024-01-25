@@ -19,3 +19,9 @@
 .logo {
   margin: 0 auto;
 }
+
+.form {
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}

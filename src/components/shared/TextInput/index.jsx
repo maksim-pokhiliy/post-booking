@@ -13,22 +13,23 @@ const TextInput = ({
 }) => {
   return (
     <label className={styles.label} style={{ marginTop: title ? 55 : 22 }}>
-      {title && 
+      {title && (
         <p
           className={classNames(styles.title, {
             [styles.titleLight]: theme === "light",
-          })}>
+          })}
+        >
           {title}
         </p>
-      }
+      )}
 
       <input
         value={value}
         onInput={({ target }) => setInput(target.value)}
         placeholder={placeholrder}
         className={classNames(styles.input, {
-          [styles.inputError]: errorActive,
           [styles.inputLight]: theme === "light",
+          [styles.inputError]: errorActive,
         })}
       />
       {errorActive && errorText && <p className={styles.error}>{errorText}</p>}

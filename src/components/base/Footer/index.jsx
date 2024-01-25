@@ -11,20 +11,28 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerList}>
         <Link className={styles.footerItem}>
-          <img className={styles.footerIcon} src={home} />
-          <p className={styles.footerTitle}>HOME</p>
+          <div className={styles.footerItemBlock}>
+            <img className={styles.footerIcon} src={home} />
+            <p className={styles.footerTitle}>HOME</p>
+          </div>
         </Link>
         <Link className={styles.footerItem}>
-          <img className={styles.footerIcon} src={expedition} />
-          <p className={styles.footerTitle}>YOUR EXPEDITION</p>
+          <div className={styles.footerItemBlock}>
+            <img className={styles.footerIcon} src={expedition} />
+            <p className={styles.footerTitle}>YOUR EXPEDITION</p>
+          </div>
         </Link>
         <Link className={styles.footerItem}>
-          <img className={styles.footerIcon} src={details} />
-          <p className={styles.footerTitle}>GUEST DETAILS</p>
+          <div className={styles.footerItemBlock}>
+            <img className={styles.footerIcon} src={details} />
+            <p className={styles.footerTitle}>GUEST DETAILS</p>
+          </div>
         </Link>
         <Link className={styles.footerItem}>
-          <img className={styles.footerIcon} src={sailing} />
-          <p className={styles.footerTitle}>ENHANCED SAILING</p>
+          <div className={styles.footerItemBlock}>
+            <img className={styles.footerIcon} src={sailing} />
+            <p className={styles.footerTitle}>ENHANCED SAILING</p>
+          </div>
         </Link>
       </div>
     </footer>

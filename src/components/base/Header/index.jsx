@@ -13,9 +13,12 @@ import expedition from "../../../assets/icons/menu/expedition.svg";
 import sailing from "../../../assets/icons/menu/sailing.svg";
 import logout from "../../../assets/icons/logout.svg";
 import classNames from "classnames";
+import { useSelector } from "react-redux";
 
 const Header = ({ style = {} }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const session = useSelector((state) => state.session);
+
   return (
     <header className={styles.header} style={style}>
       <div className={styles.container}>
@@ -23,7 +26,11 @@ const Header = ({ style = {} }) => {
           <img className={styles.logoIcon} src={logo} />
         </Link>
 
-        <div className={styles.block}>
+        <div
+          className={classNames(styles.block, {
+            [styles.blockDisabled]: !session.sessionKey,
+          })}
+        >
           <button className={styles.notification}>
             <img className={styles.notificationIcon} src={nofication} />
             <div className={styles.notificationCounter}>1</div>

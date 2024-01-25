@@ -1,0 +1,33 @@
+const agencyRegistrationRules = {
+  sales_area: { one_of: [null] },
+  api_accounts: ["string"],
+  name: ["required", "trim", "string"],
+  commission_level: ["required", "trim", "string"],
+  credit_limit: ["required", "trim", "string"],
+  code: ["required", "trim", "string"],
+  dba: ["trim", "string"],
+  address: ["required", "trim", "string"],
+  telephone: ["required", "trim", "string"],
+  website: ["trim", "url"],
+  iata: ["required", "trim", "string"],
+  clia: ["required", "trim", "string"],
+  account_type: ["required", "trim", "string"],
+  consortia: ["required", "trim", "string"],
+  market: ["required", "trim", "string"],
+  file: ["required", "trim", "string"],
+  title: ["required", "trim", "string"],
+  firstName: ["required", "trim", "string"],
+  surname: ["required", "trim", "string"],
+  personalPhoneNumber: ["required", "trim", "string"],
+  position: ["required", "trim", "string"],
+  email: ["required", "trim", "email"],
+  password: ["required", "trim", "string", { min_length: 8 }],
+  confirmPassword: [
+    "required",
+    "trim",
+    "string",
+    { equal_to_field: "password", min_length: 8 },
+  ],
+};
+
+export default agencyRegistrationRules;
