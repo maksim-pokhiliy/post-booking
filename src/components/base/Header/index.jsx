@@ -9,12 +9,16 @@ import classNames from "classnames";
 import { useSelector } from "react-redux";
 import SvgIcon from "../../shared/SvgIcon";
 
-const Header = ({ style = {} }) => {
+const Header = ({ transparent = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const session = useSelector((state) => state.session);
 
   return (
-    <header className={styles.header} style={style}>
+    <header
+      className={classNames(styles.header, {
+        [styles.headerTransparent]: transparent,
+      })}
+    >
       <div className={styles.container}>
         <Link className={styles.logo} to={"/"}>
           <img className={styles.logoIcon} src={logo} />

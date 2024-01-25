@@ -1,4 +1,5 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
 
 .block {
   width: 100%;
@@ -8,7 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media screen and (min-width: $tablet-width) {
+  @include tablet {
     justify-content: center;
     gap: 22px;
     padding-top: 0;
@@ -21,7 +22,7 @@
 }
 
 .form {
-  @media screen and (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 30px;
   }
 }

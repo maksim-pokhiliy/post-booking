@@ -1,4 +1,5 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
 
 .block {
   padding-bottom: 60px;
@@ -61,11 +62,7 @@
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: $mobile-base-width;
-
-  @media screen and (min-width: $tablet-width) {
-    max-width: $tablet-width;
-  }
+  @include main-layout-adaptive-container;
 }
 
 .content {
@@ -104,7 +101,7 @@
   gap: 21px;
   margin-top: 70px;
 
-  @media screen and (min-width: $tablet-width) {
+  @include tablet {
     gap: 7px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -119,7 +116,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media screen and (min-width: $tablet-width) {
+    @include tablet {
       width: calc((100% - 7px) / 2);
     }
   }

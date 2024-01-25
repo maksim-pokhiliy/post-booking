@@ -1,4 +1,5 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
 
 .block {
   width: 100%;
@@ -11,17 +12,18 @@
   background-repeat: no-repeat;
   padding-bottom: 40px;
 
-  @media screen and (min-width: $laptop-width) {
+  @include laptop {
     background: rgba(60, 58, 89, 0.95);
   }
 }
 
 .container {
   width: 100%;
-  max-width: $mobile-base-width;
   padding: 0 10px;
   display: grid;
   flex: 1;
+
+  @include main-layout-adaptive-container;
 }
 
 .hero {
@@ -34,7 +36,7 @@
   background-repeat: no-repeat;
   margin-bottom: 60px;
 
-  @media screen and (min-width: $laptop-width) {
+  @include laptop {
     display: block;
   }
 }
@@ -42,7 +44,7 @@
 .logo {
   display: none;
 
-  @media screen and (min-width: $laptop-width) {
+  @include laptop {
     display: block;
   }
 }
