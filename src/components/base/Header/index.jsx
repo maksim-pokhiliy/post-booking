@@ -18,7 +18,7 @@ const Header = ({ transparent = false }) => {
       className={classNames(styles.header, {
         [styles.headerTransparent]: transparent,
       })}
-    >
+      >
       <div className={styles.container}>
         <Link className={styles.logo} to={"/"}>
           <img className={styles.logoIcon} src={logo} />

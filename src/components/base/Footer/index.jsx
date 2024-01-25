@@ -37,7 +37,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <Link to="/" className={styles.footerLogo}>
+        <Link to={"/"} className={styles.footerLogo}>
           <img className={styles.footerLogoIcon} src={logo} />
         </Link>
       </div>
