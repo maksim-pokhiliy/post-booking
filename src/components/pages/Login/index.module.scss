@@ -1,0 +1,21 @@
+@import "../../../styles/variables.scss";
+
+.block {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (min-width: $tablet-width) {
+    justify-content: center;
+    gap: 22px;
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
+}
+
+.logo {
+  margin: 0 auto;
+}

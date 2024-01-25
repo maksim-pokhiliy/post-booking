@@ -1,16 +1,40 @@
 @import "../../../styles/variables.scss";
 
-.container {
+.block {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  background: linear-gradient(rgba(60, 58, 89, 0.95), rgba(60, 58, 89, 0.95)),
+    url("../../../assets/images/background-auth.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: $laptop-width) {
+    background: rgba(60, 58, 89, 0.95);
+  }
 }
 
-.content {
+.container {
   width: 100%;
+  max-width: $mobile-base-width;
+  padding: 0 10px;
   display: grid;
   flex: 1;
+}
+
+.hero {
+  display: none;
+  width: 100%;
+  height: 300px;
+  background: url("../../../assets/images/background-auth.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $laptop-width) {
+    display: block;
+  }
 }

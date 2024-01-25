@@ -1,11 +1,13 @@
 import styles from "./index.module.scss";
+import Header from "../../base/Header";
+import Footer from "../../base/Footer";
 
 function MainLayout({ children }) {
   return (
     <main className={styles.container}>
-      <div className={styles.hero} />
-
+      <Header />
       <section className={styles.content}>{children}</section>
+      <Footer />
     </main>
   );
 }

@@ -1,0 +1,41 @@
+@import "../../../styles/variables.scss";
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  background: $white;
+
+  &List {
+    display: flex;
+    gap: 2px;
+  }
+
+  &Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    background: $dark-blue;
+    padding: 16px 11px 12px 11px;
+
+    cursor: pointer;
+
+    &_current {
+      background: $teal;
+    }
+  }
+
+  &Title {
+    color: $white;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
