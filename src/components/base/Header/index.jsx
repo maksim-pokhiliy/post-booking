@@ -24,6 +24,10 @@ const Header = ({ transparent = false }) => {
           <img className={styles.logoIcon} src={logo} />
         </Link>
 
+        <Link className={styles.logoFull} to={"/"}>
+          <img className={styles.logoIcon} src={logoFull} />
+        </Link>
+
         <div
           className={classNames(styles.block, {
             [styles.blockDisabled]: !session.sessionKey,

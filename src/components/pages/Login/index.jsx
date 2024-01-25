@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import useCookies from "../../../hooks/useCookies";
 import dayjs from "dayjs";
 
+
 const Login = () => {
   const { setCookie } = useCookies();
   const dispatch = useDispatch();
@@ -66,7 +67,6 @@ const Login = () => {
     });
   };
 
-const Login = () => {
   return (
     <div className={styles.block}>
       <div className={styles.form}>

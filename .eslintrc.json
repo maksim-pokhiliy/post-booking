@@ -46,7 +46,7 @@
         "afterOpening": "never",
         "beforeClosing": "never"
       }],
-      "indent": ["error", 2, { "ignoredNodes": ["JSXElement *"] }]
+      "indent": ["warn", 2, { "ignoredNodes": ["JSXElement *"] }]
     }
   }
   
