@@ -66,6 +66,7 @@ const Login = () => {
     });
   };
 
+const Login = () => {
   return (
     <div className={styles.block}>
       <div className={styles.form}>
