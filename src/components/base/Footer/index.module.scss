@@ -1,16 +1,48 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-
   width: 100%;
-  background: $white;
+  padding-top: 100px;
+
+  &Block {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    background: $white;
+
+    @include laptop {
+      position: static;
+      background: $dark-blue;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 180px;
+    }
+  }
+
+  @include laptop {
+    padding: 0;
+  }
+
+  &Logo {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+  }
 
   &List {
     display: flex;
     gap: 2px;
+
+    @include laptop {
+      display: none;
+    }
   }
 
   &Item {
@@ -23,6 +55,13 @@
     padding: 16px 11px 12px 11px;
 
     cursor: pointer;
+
+    &Block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
     &_current {
       background: $teal;

@@ -80,15 +80,17 @@
   @include transition(padding);
 
   @include tablet {
+    max-width: $tablet-width;
     padding: 80px;
   }
 
   @include laptop {
+    max-width: $laptop-width;
     padding: 80px 160px;
   }
 
   @include desktop {
-    padding: 80px 400px;
+    max-width: $desktop-width;
   }
 }
 

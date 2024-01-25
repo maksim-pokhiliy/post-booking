@@ -10,6 +10,24 @@
   }
 }
 
+.logo {
+  @include tablet {
+    display: none;
+  }
+
+  &Full {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &Icon {
+    max-width: 180px;
+  }
+}
+
 .container {
   width: 100%;
   padding: 14px;
