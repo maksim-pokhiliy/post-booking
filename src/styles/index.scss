@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400&family=Montserrat:wght@300;400;500;600&family=Poppins&display=swap");
 @import "./mixins.scss";
 @import "./variables.scss";
 
@@ -47,8 +47,8 @@ span {
   font-family: "Montserrat";
   margin-block-start: 0;
   margin-block-end: 0;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul,
@@ -71,11 +71,19 @@ input::selection {
   background-color: $teal;
 }
 
+button,
+a {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+
 #root {
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: $background-light;
 }

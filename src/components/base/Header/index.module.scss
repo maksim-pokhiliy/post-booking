@@ -1,0 +1,123 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.header {
+  width: 100%;
+  background: $dark-blue;
+
+  &Transparent {
+    background: "transparent";
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    padding: 36px 27px;
+  }
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  &Disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.notification {
+  position: relative;
+}
+
+.notificationCounter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  background: $teal;
+  border-radius: 50%;
+
+  font-size: 7px;
+  font-family: "Montsserat";
+  color: $white;
+}
+
+.modal {
+  display: none;
+  flex-direction: column;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $dark-blue;
+  z-index: 2;
+  padding: 18px 16px;
+
+  &_active {
+    display: flex;
+  }
+
+  &Head {
+    display: flex;
+    justify-content: space-between;
+
+    &Logo {
+      &Icon {
+        max-width: 185px;
+      }
+    }
+  }
+
+  &Menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 70px;
+
+    &Button {
+      display: block;
+      color: $white;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      &Icon {
+        width: 72px;
+      }
+    }
+  }
+}
+
+.logout {
+  margin-top: auto;
+  margin-left: auto;
+
+  &Button {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+
+    color: $white;
+    font-family: "Lato";
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

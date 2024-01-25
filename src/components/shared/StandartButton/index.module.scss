@@ -1,0 +1,15 @@
+@import "../../../styles/variables.scss";
+
+.button {
+  width: 100%;
+  padding: 21px 0;
+  background: $teal;
+
+  color: $white;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  text-transform: uppercase;
+}

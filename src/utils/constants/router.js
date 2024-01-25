@@ -5,7 +5,7 @@ import { LOGIN, ROOT } from "./routes";
 
 const PUBLIC_ROUTES = {
   [ROOT]: { element: Home, layout: "main" },
-  [LOGIN]: { element: Login, layout: "main" },
+  [LOGIN]: { element: Login, layout: "auth" },
 };
 
 const PRIVATE_ROUTES = {};
