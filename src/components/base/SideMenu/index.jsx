@@ -9,12 +9,10 @@ import { ROOT } from "../../../utils/constants/routes";
 import CustomNavLink from "../../shared/CustomNavLink";
 
 import styles from "./index.module.scss";
-import { useDispatch } from "react-redux";
 
 import logout from "../../../assets/icons/logout.svg";
 
 function SideMenu({ isVisible, onClose }) {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { pathname } = useLocation();

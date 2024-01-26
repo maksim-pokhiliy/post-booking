@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Link, To } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import styles from "./index.module.scss";
 

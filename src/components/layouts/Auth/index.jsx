@@ -1,8 +1,6 @@
 import styles from "./index.module.scss";
 import Header from "../../base/Header";
 import logo from "../../../assets/icons/logo.png";
-import { useState } from "react";
-import SideMenu from "../../base/SideMenu";
 
 function AuthLayout({ children }) {
   return (
