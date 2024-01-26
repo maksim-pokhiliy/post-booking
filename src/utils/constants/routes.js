@@ -15,7 +15,8 @@ export const routeParams = (path, params) => {
 
 // PRIVATE ROUTES
 export const ROOT = "/";
-export const ESCAPE = `${ROOT}/escape`;
+export const ESCAPE = `${ROOT}escape`;
+export const GUEST_DETAILS = `${ROOT}guest`;
 
 // PUBLIC ROUTES
 export const LOGIN = `${ROOT}login`;

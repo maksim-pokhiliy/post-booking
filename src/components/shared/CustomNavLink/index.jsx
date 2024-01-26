@@ -3,8 +3,15 @@ import classNames from "classnames";
 
 import styles from "./index.module.scss";
 import home from "../../../assets/icons/menu/home.svg";
+import expedition from "../../../assets/icons/menu/expedition.svg";
+import details from "../../../assets/icons/menu/details.svg";
 
 function CustomNavLink({ label, to, className }) {
+  const icons = {
+    home: home,
+    your_expedition: expedition,
+    guest_details: details,
+  };
   return (
     <NavLink
       to={to}
@@ -14,8 +21,8 @@ function CustomNavLink({ label, to, className }) {
         })
       }
     >
-      <img className={styles.icon} src={home} />
-      {label}
+      <img className={styles.icon} src={icons[label]} />
+      {label.replaceAll("_", " ")}
     </NavLink>
   );
 }
