@@ -2,10 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./index.module.scss";
 import Collapsible from "../../shared/Collapsible";
 import StandartButton from "../../shared/StandartButton";
+import ExpeditionBody from "./molecules/ExpeditionBody";
+import ExpeditionHead from "./molecules/ExpeditionHead";
+
 import polarIcon from "../../../assets/icons/polar-expeditions.svg";
 import cabins1 from "../../../assets/images/cabins/image-1.jpg";
 import cabins2 from "../../../assets/images/cabins/image-2.jpg";
-import iterary1 from "../../../assets/images/itinerary/image-1.jpg";
 import sailing1 from "../../../assets/images/sailing/image-1.jpg";
 import sailing2 from "../../../assets/images/sailing/image-2.jpg";
 import sailing3 from "../../../assets/images/sailing/image-3.jpg";
@@ -13,6 +15,7 @@ import sailing4 from "../../../assets/images/sailing/image-4.jpg";
 
 const Escape = () => {
   const navigation = useNavigate();
+
   return (
     <div className={styles.block}>
       <div className={styles.container}>
@@ -123,86 +126,12 @@ const Escape = () => {
 
           <div className={styles.expeditionList}>
             <Collapsible
-              renderHeader={() => (
-                <div className={styles.expeditionHead}>
-                  <div className={styles.expeditionHeadFlex}>
-                    <p className={styles.expeditionHeadDate}>NOV 26</p>
-                    <p className={styles.expeditionHeadLocation}>
-                      Ushuaia, Argentina
-                    </p>
-                  </div>
-                </div>
-              )}
-              renderBody={() => (
-                <div className={styles.expeditionBody}>
-                  <div className={styles.expeditionBodyImage}>
-                    <img className={styles.expeditionBodyImg} src={iterary1} />
-                  </div>
-                  <div className={styles.expeditionBodyContent}>
-                    <div className={styles.expeditionBodyDeparts}>
-                      <p className={styles.expeditionBodyDepartsText}>
-                        Departs:
-                      </p>
-                      <div className={styles.expeditionBodyDepartsValue}>
-                        07:00am
-                      </div>
-                    </div>
-                    <p className={styles.expeditionBodyDescription}>
-                      Although its nickname the “End of the World” – derived
-                      from its location along the southernmost tip of South
-                      America among the Tierra del Fuego archipelago – Ushuaia
-                      is far from the end of any adventure. Where the Andes meet
-                      the Beagle Channel and the snow-capped Martial Mountains
-                      sit behind a sprawling city of colorful buildings, lies a
-                      lively town ready and waiting to take you on the thrill
-                      ride of a lifetime. Scenes like Parque Yatana give you the
-                      chance to immerse yourself in the rich, indigenous
-                      culture.
-                    </p>
-                  </div>
-                </div>
-              )}
+              renderHeader={ExpeditionHead}
+              renderBody={ExpeditionBody}
             />
             <Collapsible
-              renderHeader={() => (
-                <div className={styles.expeditionHead}>
-                  <div className={styles.expeditionHeadFlex}>
-                    <p className={styles.expeditionHeadDate}>NOV 26</p>
-                    <p className={styles.expeditionHeadLocation}>
-                      Ushuaia, Argentina
-                    </p>
-                  </div>
-                </div>
-              )}
-              renderBody={() => (
-                <div className={styles.expeditionBody}>
-                  <div className={styles.expeditionBodyImage}>
-                    <img className={styles.expeditionBodyImg} src={iterary1} />
-                  </div>
-                  <div className={styles.expeditionBodyContent}>
-                    <div className={styles.expeditionBodyDeparts}>
-                      <p className={styles.expeditionBodyDepartsText}>
-                        Departs:
-                      </p>
-                      <div className={styles.expeditionBodyDepartsValue}>
-                        07:00am
-                      </div>
-                    </div>
-                    <p className={styles.expeditionBodyDescription}>
-                      Although its nickname the “End of the World” – derived
-                      from its location along the southernmost tip of South
-                      America among the Tierra del Fuego archipelago – Ushuaia
-                      is far from the end of any adventure. Where the Andes meet
-                      the Beagle Channel and the snow-capped Martial Mountains
-                      sit behind a sprawling city of colorful buildings, lies a
-                      lively town ready and waiting to take you on the thrill
-                      ride of a lifetime. Scenes like Parque Yatana give you the
-                      chance to immerse yourself in the rich, indigenous
-                      culture.
-                    </p>
-                  </div>
-                </div>
-              )}
+              renderHeader={ExpeditionHead}
+              renderBody={ExpeditionBody}
             />
           </div>
         </div>
@@ -253,7 +182,7 @@ const Escape = () => {
           <StandartButton
             text="VIEW ALL EXPERIENCES"
             click={() => navigation("/")}
-            style={{width: "unset"}}
+            style={{ width: "unset" }}
             styleContainer={{ display: "flex", justifyContent: "flex-end" }}
           />
         </div>

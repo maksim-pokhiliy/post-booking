@@ -70,13 +70,13 @@ const Header = ({ transparent = false }) => {
 
           <ul className={styles.modalMenu}>
             <li className={styles.modalMenuItem}>
-              <Link className={styles.modalMenuButton}>
+              <Link className={styles.modalMenuButton} to="/">
                 <img className={styles.modalMenuButtonIcon} src={home} />
                 Home
               </Link>
             </li>
             <li className={styles.modalMenuItem}>
-              <Link className={styles.modalMenuButton}>
+              <Link className={styles.modalMenuButton} to="/escape">
                 <img className={styles.modalMenuButtonIcon} src={expedition} />
                 YOUR EXPEDITION
               </Link>

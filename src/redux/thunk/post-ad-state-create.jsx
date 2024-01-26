@@ -19,12 +19,11 @@ export const postAdStateCreate = createAsyncThunk(
 
     await axios
       .post(`${process.env.REACT_APP_DEV_API_URL}/ad-state/create`, body)
-      .then((res) => {
+      .then(() => {
         // console.log("post ad state create res = ", res)
       })
       .catch((err) => {
         if (err.response) {
-          console.error("post ad state create err = ", err);
           window.open(
             `https://www.phind.com/search?q=${err.message}`,
             "_blanck",
