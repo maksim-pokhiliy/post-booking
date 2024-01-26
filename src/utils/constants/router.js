@@ -12,7 +12,12 @@ const PUBLIC_ROUTES = {
 
 const PRIVATE_ROUTES = {};
 
-const PUBLIC_SIDE_MENU = {};
+const PUBLIC_SIDE_MENU = {
+  [ROOT]: {
+    type: "link",
+    label: "home",
+  },
+};
 
 const PRIVATE_SIDE_MENU = {
   [ROOT]: {
