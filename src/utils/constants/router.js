@@ -3,7 +3,7 @@ import Escape from "../../components/pages/Escape";
 import GuestDetails from "../../components/pages/GuestDetails";
 import Home from "../../components/pages/Home";
 import Login from "../../components/pages/Login";
-import { ESCAPE, GUEST_DETAILS, LOGIN, ROOT } from "./routes";
+import { ESCAPE, GUEST_DETAILS, LOGIN, ROOT, SAILING } from "./routes";
 
 const PUBLIC_ROUTES = {
   [LOGIN]: { element: Login, layout: "auth" },
@@ -26,6 +26,10 @@ const PUBLIC_SIDE_MENU = {
   [GUEST_DETAILS]: {
     type: "link",
     label: "guest_details",
+  },
+  [SAILING]: {
+    type: "link",
+    label: "enhanced_sailing",
   },
 };
 

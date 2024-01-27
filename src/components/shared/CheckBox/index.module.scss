@@ -1,0 +1,32 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.input {
+  appearance: none;
+
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  border: 1px solid #afafaf;
+  background: $white;
+  transition: background 250ms linear;
+
+  &:checked {
+    background: $teal;
+  }
+}
+
+.text {
+  color: $light;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}

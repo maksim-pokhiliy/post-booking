@@ -1,0 +1,57 @@
+@import "../../../styles/variables.scss";
+
+.select {
+  position: relative;
+  margin-top: 40px;
+}
+
+.block {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.title {
+  position: absolute;
+  bottom: 100%;
+
+  color: $text-silver;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #afafaf;
+  background: #fff;
+  padding: 20px;
+
+  color: $light;
+  text-align: center;
+  font-family: "Lato";
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 23px;
+
+  transition: color 250ms linear;
+  transition-property: color, border, background;
+
+  &_active {
+    color: $white;
+    border: 1px solid #007481;
+    background: #007481;
+  }
+
+  &:hover {
+    color: $white;
+    border: 1px solid #007481;
+    background: #007481;
+  }
+}

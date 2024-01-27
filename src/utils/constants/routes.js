@@ -17,6 +17,9 @@ export const routeParams = (path, params) => {
 export const ROOT = "/";
 export const ESCAPE = `${ROOT}escape`;
 export const GUEST_DETAILS = `${ROOT}guest`;
+export const GUEST_EDIT = `${ROOT}guest-edit`;
+export const GUEST_DOCUMENT = `${ROOT}guest-document`;
+export const SAILING = `${ROOT}sailing`;
 
 // PUBLIC ROUTES
 export const LOGIN = `${ROOT}login`;

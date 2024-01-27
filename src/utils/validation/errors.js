@@ -4,9 +4,12 @@ export const REQUIRED_ERRORS = {
   newPassword: "New password is required",
   start_date: "Please chose start date",
   end_date: "Please chose end date",
+  date: "Please chose date",
   name: "Please enter name",
   address: "Please enter address",
+  address1: "Please enter address",
   telephone: "Please enter phone number",
+  tel: "Please enter phone number",
   iata: "Please enter IATA number",
   clia: "Please enter CLIA number",
   account_type: "Please chose organization type",
@@ -19,6 +22,15 @@ export const REQUIRED_ERRORS = {
   personalPhoneNumber: "Please enter your phone number",
   position: "Please chose position",
   confirmPassword: "Password confirmation is required",
+  city: "Please enter city",
+  state: "Please enter state",
+  zip: "Please enter zip",
+  country: "Please enter country",
+  gender: "Please enter gender",
+  infoAccept: "Please accept info",
+  type: "Please select type",
+  document: "Please enter document",
+  documentDate: "Please enter document date",
 };
 
 export const WRONG_FORMAT_ERRORS = {
