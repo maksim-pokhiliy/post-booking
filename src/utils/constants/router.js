@@ -3,13 +3,22 @@ import Escape from "../../components/pages/Escape";
 import GuestDetails from "../../components/pages/GuestDetails";
 import Home from "../../components/pages/Home";
 import Login from "../../components/pages/Login";
-import { ESCAPE, GUEST_DETAILS, LOGIN, ROOT, SAILING } from "./routes";
+import GuestEdit from "../../components/pages/GuestEdit";
+import {
+  ESCAPE,
+  GUEST_DETAILS,
+  GUEST_EDIT,
+  LOGIN,
+  ROOT,
+  SAILING,
+} from "./routes";
 
 const PUBLIC_ROUTES = {
   [LOGIN]: { element: Login, layout: "auth" },
   [ROOT]: { element: Home, layout: "main" },
   [ESCAPE]: { element: Escape, layout: "main" },
   [GUEST_DETAILS]: { element: GuestDetails, layout: "main" },
+  [GUEST_EDIT]: { element: GuestEdit, layout: "main" },
 };
 
 const PRIVATE_ROUTES = {};
