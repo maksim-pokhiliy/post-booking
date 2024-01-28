@@ -13,8 +13,10 @@ import {
   LOGIN,
   ROOT,
   SAILING,
+  SAILING_BUY,
 } from "./routes";
 import Sailing from "../../components/pages/Sailing";
+import SailingBuy from "../../components/pages/SailingBuy";
 
 const PUBLIC_ROUTES = {
   [LOGIN]: { element: Login, layout: "auth" },
@@ -24,6 +26,7 @@ const PUBLIC_ROUTES = {
   [GUEST_EDIT]: { element: GuestEdit, layout: "main" },
   [GUEST_DOCUMENT]: { element: GuestDocument, layout: "main" },
   [SAILING]: { element: Sailing, layout: "main" },
+  [SAILING_BUY]: { element: SailingBuy, layout: "sailing" },
 };
 
 const PRIVATE_ROUTES = {};
