@@ -7,10 +7,15 @@ import image3 from "../../../assets/images/home-navigation/image-3.jpg";
 import image4 from "../../../assets/images/home-navigation/image-4.jpg";
 
 import buttonHome from "../../../assets/icons/button-home.svg";
+import ModalContainer from "../../container/ModalContainer";
+import { useState } from "react";
 
 const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(true);
   return (
     <>
+      <ModalContainer setClose={setIsModalOpen} isModalOpen={isModalOpen} />
+
       <div className={styles.block}>
         <div className={styles.container}>
           <div className={styles.content}>

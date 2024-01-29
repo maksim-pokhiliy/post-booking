@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import logo from "../../../assets/icons/logo.png";
 import logoFull from "../../../assets/icons/logo-full.png";
-import notification from "../../../assets/icons/notification.svg";
 import menu from "../../../assets/icons/menu.svg";
 import close from "../../../assets/icons/close.svg";
 import home from "../../../assets/icons/menu/home.svg";
@@ -15,6 +14,7 @@ import logout from "../../../assets/icons/logout.svg";
 
 import classNames from "classnames";
 import { useSelector } from "react-redux";
+import NotificationCounter from "../../shared/NotificationCounter";
 
 const Header = ({ transparent = false }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,10 +40,7 @@ const Header = ({ transparent = false }) => {
             [styles.blockDisabled]: !session.sessionKey,
           })}
         >
-          <button className={styles.notification}>
-            <img className={styles.notificationIcon} src={notification} />
-            <div className={styles.notificationCounter}>1</div>
-          </button>
+          <NotificationCounter />
           <button
             className={styles.openMenu}
             onClick={() => setIsOpen(!isOpen)}
