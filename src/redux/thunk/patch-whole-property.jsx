@@ -38,12 +38,11 @@ export const patchWholeProperty = createAsyncThunk(
 
     await axios
       .patch(`${process.env.REACT_APP_DEV_API_URL}/room/whole-property`, body)
-      .then((res) => {
+      .then(() => {
         // console.log("patchWholeProperty res = ", res)
       })
       .catch((err) => {
         if (err.response) {
-          console.error("err = ", err);
           window.open(
             `https://www.phind.com/search?q=${err.message}`,
             "_blanck",

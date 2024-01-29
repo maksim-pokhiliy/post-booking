@@ -2,28 +2,24 @@ import { useState } from "react";
 import styles from "./index.module.scss";
 import TextInput from "../../shared/TextInput";
 import StandartButton from "../../shared/StandartButton";
-import TOAST from "../../../utils/constants/toast";
-import { showToast } from "../../../redux/reducer/toast";
 import { validateCreateAgentSession } from "../../../utils/validation";
-import { useDispatch, useSelector } from "react-redux";
 import useCookies from "../../../hooks/useCookies";
 import dayjs from "dayjs";
 
-
 const Login = () => {
   const { setCookie } = useCookies();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   // const [initAgentSession] = useLazyInitAgentSessionQuery();
 
-  const { isLoading } = useSelector((state) => state.session);
+  // const { isLoading } = useSelector((state) => state.session);
 
   const [inputs, setInputs] = useState({
     email: { value: "", errorMessage: "" },
     password: { value: "", errorMessage: "" },
   });
 
-  const login = async (credentials) => {
+  const login = async () => {
     // const { isError } = await initAgentSession(credentials);
 
     // if (isError) {

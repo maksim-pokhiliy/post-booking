@@ -5,22 +5,6 @@
   padding-bottom: 60px;
 }
 
-.hero {
-  background: url("../../../assets/images/background-home.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 225px;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-
-  @include laptop {
-    height: 350px;
-  }
-}
-
 .counter {
   display: flex;
   justify-content: center;
@@ -181,55 +165,5 @@
   &Flex {
     display: flex;
     justify-content: space-between;
-  }
-}
-
-.navigation {
-  display: none;
-  justify-content: center;
-  width: 100%;
-  transform: translateY(50%);
-
-  @include laptop {
-    display: flex;
-  }
-
-  &List {
-    display: flex;
-    gap: 2px;
-    background: $white;
-  }
-
-  &Item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    background: $dark-blue;
-    padding: 16px 11px 12px 11px;
-
-    cursor: pointer;
-
-    &Block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &_current {
-      background: $teal;
-    }
-  }
-
-  &Title {
-    color: $white;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
   }
 }

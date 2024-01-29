@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getUsers = createAsyncThunk(
   "Get Users",
-  async (_, { dispatch, getState }) => {
+  async (_, { getState }) => {
     const s = getState();
 
     const requestOptions = {
@@ -17,11 +17,9 @@ export const getUsers = createAsyncThunk(
       },
     };
 
-    const res = await axios.get(
+    await axios.get(
       `${process.env.REACT_APP_DEV_API_URL}/users`,
       requestOptions,
     );
-
-    console.log("getUsers res = ", res);
   },
 );

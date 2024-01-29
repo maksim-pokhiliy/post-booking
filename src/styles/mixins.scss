@@ -75,18 +75,21 @@
 
 // LAYOUT
 @mixin main-layout-adaptive-container {
-  padding: 40px;
+  padding: 25px;
+  padding-top: 0;
   box-sizing: border-box;
   @include transition(padding);
 
   @include tablet {
     max-width: $tablet-width;
-    padding: 80px;
+    padding: 80px 20px;
+    padding-top: 0;
   }
 
   @include laptop {
     max-width: $laptop-width;
-    padding: 80px 160px;
+    padding: 80px 20px;
+    padding-top: 0;
   }
 
   @include desktop {

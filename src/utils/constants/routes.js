@@ -13,8 +13,11 @@ export const routeParams = (path, params) => {
   return path;
 };
 
-// PUBLIC ROUTES
+// PRIVATE ROUTES
 export const ROOT = "/";
+export const ESCAPE = `${ROOT}/escape`;
+
+// PUBLIC ROUTES
 export const LOGIN = `${ROOT}login`;
 
 // SIDE MENU ROUTES

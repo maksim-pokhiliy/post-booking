@@ -1,11 +1,13 @@
 // CONSTANTS
+import Escape from "../../components/pages/Escape";
 import Home from "../../components/pages/Home";
 import Login from "../../components/pages/Login";
-import { LOGIN, ROOT } from "./routes";
+import { ESCAPE, LOGIN, ROOT } from "./routes";
 
 const PUBLIC_ROUTES = {
-  [ROOT]: { element: Home, layout: "main" },
   [LOGIN]: { element: Login, layout: "auth" },
+  [ROOT]: { element: Home, layout: "main" },
+  [ESCAPE]: { element: Escape, layout: "main" },
 };
 
 const PRIVATE_ROUTES = {};
