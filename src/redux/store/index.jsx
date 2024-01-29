@@ -11,10 +11,12 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
+import { modalReducer } from "../reducer/modal";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   toast: toast,
+  modal: modalReducer,
 });
 
 const persistConfig = {

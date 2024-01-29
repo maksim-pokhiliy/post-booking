@@ -3,8 +3,12 @@ import NotificationCounter from "../../shared/NotificationCounter";
 import closeModal from "../../../assets/icons/close-modal.svg";
 import StandartButton from "../../shared/StandartButton";
 import classNames from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import { setModal } from "../../../redux/reducer/modal";
 
-const ModalContainer = ({ isModalOpen = false, setClose }) => {
+const ModalContainer = () => {
+  const dispatch = useDispatch();
+  const isModalOpen = useSelector((state) => state.modal.isOpen);
   return (
     <div
       className={classNames(styles.container, {
@@ -13,9 +17,12 @@ const ModalContainer = ({ isModalOpen = false, setClose }) => {
     >
       <div className={styles.modal}>
         <div className={styles.head}>
-          <NotificationCounter />
+          <NotificationCounter count={1} />
 
-          <button className={styles.close} onClick={() => setClose(false)}>
+          <button
+            className={styles.close}
+            onClick={() => dispatch(setModal(false))}
+          >
             <img className={styles.closeIcon} src={closeModal} />
           </button>
         </div>

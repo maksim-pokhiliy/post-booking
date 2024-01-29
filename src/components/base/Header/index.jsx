@@ -13,10 +13,12 @@ import sailing from "../../../assets/icons/menu/sailing.svg";
 import logout from "../../../assets/icons/logout.svg";
 
 import classNames from "classnames";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NotificationCounter from "../../shared/NotificationCounter";
+import { setModal } from "../../../redux/reducer/modal";
 
 const Header = ({ transparent = false }) => {
+  const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
   const session = useSelector((state) => state.session);
 
@@ -40,7 +42,7 @@ const Header = ({ transparent = false }) => {
             [styles.blockDisabled]: !session.sessionKey,
           })}
         >
-          <NotificationCounter />
+          <NotificationCounter onClick={() => dispatch(setModal(true))} />
           <button
             className={styles.openMenu}
             onClick={() => setIsOpen(!isOpen)}
