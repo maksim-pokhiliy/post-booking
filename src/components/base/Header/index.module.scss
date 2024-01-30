@@ -40,11 +40,8 @@
 }
 
 .notification {
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  right: 90px;
-
+  position: relative;
+  right: 50px;
   transition: opacity 250ms linear;
 
   &_disabled {
@@ -53,7 +50,7 @@
   }
 }
 
-.modal {
+.nav {
   display: none;
   gap: 40px;
 }

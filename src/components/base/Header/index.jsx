@@ -3,32 +3,18 @@ import { Link } from "react-router-dom";
 
 import logo from "../../../assets/icons/logo.png";
 import logoFull from "../../../assets/icons/logo-full.png";
-import menu from "../../../assets/icons/menu.svg";
-import close from "../../../assets/icons/close.svg";
-import home from "../../../assets/icons/menu/home.svg";
-import details from "../../../assets/icons/menu/details.svg";
-import expedition from "../../../assets/icons/menu/expedition.svg";
-import sailing from "../../../assets/icons/menu/sailing.svg";
-import logout from "../../../assets/icons/logout.svg";
-
-import classNames from "classnames";
-import { useDispatch, useSelector } from "react-redux";
+import SvgButton from "../../shared/SvgButton";
 import NotificationCounter from "../../shared/NotificationCounter";
+
+import styles from "./index.module.scss";
+import { useDispatch } from "react-redux";
 import { setModal } from "../../../redux/reducer/modal";
 
-const Header = ({ transparent = false }) => {
-  const dispatch = useDispatch();
-  const [isOpen, setIsOpen] = useState(false);
-  const session = useSelector((state) => state.session);
-
-
 function Header({ isMenuVisible, onMenuToggle, isMenuDisabled = false }) {
+  const dispatch = useDispatch();
+
   return (
-    <header
-      className={classNames(styles.header, {
-        [styles.headerTransparent]: transparent,
-      })}
-    >
+    <header className={styles.header}>
       <div className={styles.container}>
         <Link className={styles.logo} to={"/"}>
           <img className={styles.logoIcon} src={logo} />
@@ -39,26 +25,17 @@ function Header({ isMenuVisible, onMenuToggle, isMenuDisabled = false }) {
         </Link>
 
         <div
-          className={classNames(styles.block, {
-            [styles.blockDisabled]: !session.sessionKey,
+          className={classNames(styles.notification, {
+            [styles.notification_disabled]: isMenuVisible || isMenuDisabled,
           })}
         >
-          <NotificationCounter onClick={() => dispatch(setModal(true))} />
-          <button
-            className={styles.openMenu}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <img className={styles.openMenuIcon} src={menu} />
-          </button>
+          <NotificationCounter
+            isMenuVisible={isMenuDisabled}
+            isMenuDisabled={isMenuDisabled}
+            count={1}
+            onClick={() => dispatch(setModal(true))}
+          />
         </div>
-        <div
-          className={classNames(styles.modal, {
-            [styles.modal_active]: isOpen,
-          })}
-        >
-          <img className={styles.notificationIcon} src={notification} />
-          <div className={styles.notificationCounter}>1</div>
-        </button>
 
         <>
           <SvgButton

@@ -24,7 +24,7 @@
       "react/display-name": "error",
       "no-console": "warn",
       "no-unused-vars": "warn",
-      "no-extra-parens": "warn",
+      "no-extra-parens": "off",
       "no-useless-constructor": "error",
       "no-useless-rename": "error",
       "prefer-arrow-callback": "error",
