@@ -2,8 +2,12 @@ import styles from "./index.module.scss";
 import Header from "../../base/Header";
 import Footer from "../../base/Footer";
 import Hero from "../../base/Hero";
+
+import ModalContainer from "../../container/ModalContainer";
+
 import { useState } from "react";
 import SideMenu from "../../base/SideMenu";
+
 
 function MainLayout({ children }) {
   const [isMenuVisible, setIsMenuVissible] = useState(false);
@@ -13,6 +17,7 @@ function MainLayout({ children }) {
   };
   return (
     <main className={styles.container}>
+      <ModalContainer />
       <Header
         isMenuVisible={isMenuVisible}
         onMenuToggle={handleMenuToggle(!isMenuVisible)}

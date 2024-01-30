@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 
 import logo from "../../../assets/icons/logo.png";
 import logoFull from "../../../assets/icons/logo-full.png";
-import SvgButton from "../../shared/SvgButton";
-import styles from "./index.module.scss";
-import notification from "../../../assets/icons/notification.svg";
 import menu from "../../../assets/icons/menu.svg";
 import close from "../../../assets/icons/close.svg";
 import home from "../../../assets/icons/menu/home.svg";
@@ -15,9 +12,12 @@ import sailing from "../../../assets/icons/menu/sailing.svg";
 import logout from "../../../assets/icons/logout.svg";
 
 import classNames from "classnames";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import NotificationCounter from "../../shared/NotificationCounter";
+import { setModal } from "../../../redux/reducer/modal";
 
 const Header = ({ transparent = false }) => {
+  const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
   const session = useSelector((state) => state.session);
 
@@ -38,9 +38,22 @@ function Header({ isMenuVisible, onMenuToggle, isMenuDisabled = false }) {
           <img className={styles.logoIcon} src={logoFull} />
         </Link>
 
-        <button
-          className={classNames(styles.notification, {
-            [styles.notification_disabled]: isMenuVisible || isMenuDisabled,
+        <div
+          className={classNames(styles.block, {
+            [styles.blockDisabled]: !session.sessionKey,
+          })}
+        >
+          <NotificationCounter onClick={() => dispatch(setModal(true))} />
+          <button
+            className={styles.openMenu}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <img className={styles.openMenuIcon} src={menu} />
+          </button>
+        </div>
+        <div
+          className={classNames(styles.modal, {
+            [styles.modal_active]: isOpen,
           })}
         >
           <img className={styles.notificationIcon} src={notification} />

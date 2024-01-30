@@ -53,25 +53,7 @@
   }
 }
 
-.notificationCounter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: absolute;
-  top: 2px;
-  right: 0px;
-  width: 12px;
-  height: 12px;
-  background: $teal;
-  border-radius: 50%;
-
-  font-size: 7px;
-  font-family: "Montsserat";
-  color: $white;
-}
-
-.nav {
+.modal {
   display: none;
   gap: 40px;
 }
