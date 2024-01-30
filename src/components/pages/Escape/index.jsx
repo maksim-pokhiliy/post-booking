@@ -122,7 +122,6 @@ const Escape = () => {
         <div className={styles.sailing}>
           <p className={styles.sailingTitle}>ENHANCED SAILING</p>
           <p className={styles.sailingSecond}>Booked experiences</p>
-
           <ExcursionList />
 
           <StandartButton

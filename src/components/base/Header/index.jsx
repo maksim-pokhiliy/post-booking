@@ -4,13 +4,31 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/icons/logo.png";
 import logoFull from "../../../assets/icons/logo-full.png";
 import SvgButton from "../../shared/SvgButton";
-import notification from "../../../assets/icons/notification.svg";
-
 import styles from "./index.module.scss";
+import notification from "../../../assets/icons/notification.svg";
+import menu from "../../../assets/icons/menu.svg";
+import close from "../../../assets/icons/close.svg";
+import home from "../../../assets/icons/menu/home.svg";
+import details from "../../../assets/icons/menu/details.svg";
+import expedition from "../../../assets/icons/menu/expedition.svg";
+import sailing from "../../../assets/icons/menu/sailing.svg";
+import logout from "../../../assets/icons/logout.svg";
+
+import classNames from "classnames";
+import { useSelector } from "react-redux";
+
+const Header = ({ transparent = false }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const session = useSelector((state) => state.session);
+
 
 function Header({ isMenuVisible, onMenuToggle, isMenuDisabled = false }) {
   return (
-    <header className={styles.header}>
+    <header
+      className={classNames(styles.header, {
+        [styles.headerTransparent]: transparent,
+      })}
+    >
       <div className={styles.container}>
         <Link className={styles.logo} to={"/"}>
           <img className={styles.logoIcon} src={logo} />
