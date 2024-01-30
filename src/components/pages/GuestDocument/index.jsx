@@ -40,9 +40,7 @@ const GuestDocument = () => {
         document: document.value,
         documentDate: documentDate.value,
       },
-      onSuccess: async (validData) => {
-        console.log(validData);
-      },
+      onSuccess: async () => {},
       onError: (errors) => handleFormError(errors),
     });
   };
@@ -85,6 +83,7 @@ const GuestDocument = () => {
           <div className={styles.form}>
             <div className={styles.grid}>
               <SelectInput
+                title="Document type"
                 defaultText="Select type"
                 required
                 value={type.value}

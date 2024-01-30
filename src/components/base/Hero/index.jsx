@@ -8,7 +8,6 @@ import backgroundEscape from "../../../assets/images/background-escape.jpg";
 import backgroundGuest from "../../../assets/images/background-guest.jpg";
 import backgroundSailing from "../../../assets/images/background-sailing.jpg";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import {
   ROOT,
   ESCAPE,
