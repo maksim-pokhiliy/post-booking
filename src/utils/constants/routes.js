@@ -20,6 +20,7 @@ export const GUEST_DETAILS = `${ROOT}guest`;
 export const GUEST_EDIT = `${ROOT}guest-edit`;
 export const GUEST_DOCUMENT = `${ROOT}guest-document`;
 export const SAILING = `${ROOT}sailing`;
+export const SAILING_BUY = `${ROOT}sailing-buy`;
 
 // PUBLIC ROUTES
 export const LOGIN = `${ROOT}login`;

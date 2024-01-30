@@ -1,0 +1,196 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @include main-layout-adaptive-container;
+
+  @include tablet {
+    max-width: 756px;
+  }
+
+  @include laptop {
+    max-width: 640px;
+    padding-top: 100px;
+  }
+
+  @include desktop {
+    padding-top: 100px;
+  }
+}
+
+.back {
+  display: block;
+  color: $teal;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 23px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.title {
+  color: $dark-blue;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  margin-top: 23px;
+
+  @include laptop {
+    text-align: center;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.price {
+  display: none;
+
+  @include laptop {
+    display: block;
+    padding: 12px 48px;
+    color: $background-dark;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    background: $light-cream;
+    margin-bottom: 33px;
+  }
+}
+
+.description {
+  color: $text-silver;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 40px;
+
+  @include laptop {
+    text-align: center;
+  }
+}
+
+.count {
+  padding: 10px 26px;
+  border: 2px solid $teal;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.info {
+  &Number {
+    color: $teal;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+  }
+
+  &Title {
+    color: $dark-blue;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+
+  &Desc {
+    color: #3c3a59;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 600;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.total {
+  padding: 18px 33px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $light-cream;
+
+  @include laptop {
+    padding: 0;
+    width: 50%;
+    background: none;
+  }
+
+  &Block {
+    @include laptop {
+      width: 100%;
+    }
+  }
+
+  &Flex {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+
+    @include laptop {
+      width: 100%;
+      gap: 30px;
+      justify-content: space-between;
+      background: $light-cream;
+      padding: 18px 33px;
+    }
+  }
+
+  &Sub {
+    color: $background-dark;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &Number {
+    color: $background-dark;
+    font-size: 45px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  &Button {
+    margin-left: -10%;
+    width: 50%;
+    padding: 21px 0;
+    background: $teal;
+    color: $white;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+  }
+}

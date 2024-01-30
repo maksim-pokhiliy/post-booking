@@ -3,11 +3,44 @@ import home from "../../../assets/icons/menu/home.svg";
 import expedition from "../../../assets/icons/menu/expedition.svg";
 import details from "../../../assets/icons/menu/details.svg";
 import sailing from "../../../assets/icons/menu/sailing.svg";
-import { Link } from "react-router-dom";
+import backgroundHome from "../../../assets/images/background-home.jpg";
+import backgroundEscape from "../../../assets/images/background-escape.jpg";
+import backgroundGuest from "../../../assets/images/background-guest.jpg";
+import backgroundSailing from "../../../assets/images/background-sailing.jpg";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import {
+  ROOT,
+  ESCAPE,
+  GUEST_DETAILS,
+  GUEST_EDIT,
+  GUEST_DOCUMENT,
+  SAILING,
+} from "../../../utils/constants/routes";
 
 const Hero = () => {
+  const location = useLocation();
+
+  const backgroundList = {
+    [ROOT]: backgroundHome,
+    [ESCAPE]: backgroundEscape,
+    [GUEST_DETAILS]: backgroundGuest,
+    [GUEST_EDIT]: backgroundGuest,
+    [GUEST_DOCUMENT]: backgroundGuest,
+    [SAILING]: backgroundSailing,
+  };
+
+  const getBackground = () => {
+    return backgroundList[location.pathname];
+  };
+
   return (
-    <div className={styles.hero}>
+    <div
+      className={styles.hero}
+      style={{
+        backgroundImage: `url(${getBackground() ? getBackground() : backgroundHome})`,
+      }}
+    >
       <div className={styles.navigation}>
         <div className={styles.navigationList}>
           <Link className={styles.navigationItem}>
