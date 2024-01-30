@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 import TextInput from "../../shared/TextInput";
 import GenderSelect from "../../shared/GenderSelect";
 import CheckBox from "../../shared/CheckBox";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import StandartButton from "../../shared/StandartButton";
 import SitemapList from "../../shared/SitemapList";
 import { validateEditGuest } from "../../../utils/validation";
@@ -81,16 +81,10 @@ const GuestEdit = () => {
         country: country.value,
         gender: gender.value,
       },
-      onSuccess: async (validData) => {
-        console.log(validData);
-      },
+      onSuccess: async () => {},
       onError: (errors) => handleFormError(errors),
     });
   };
-
-  useEffect(() => {
-    console.log("ok");
-  }, []);
 
   return (
     <div className={styles.container}>
