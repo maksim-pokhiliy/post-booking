@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import styles from "./index.module.scss";
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 
 import logo from "../../../assets/icons/logo.png";
 import logoFull from "../../../assets/icons/logo-full.png";
+import SvgButton from "../../shared/SvgButton";
+import styles from "./index.module.scss";
 import notification from "../../../assets/icons/notification.svg";
 import menu from "../../../assets/icons/menu.svg";
 import close from "../../../assets/icons/close.svg";
@@ -20,6 +21,8 @@ const Header = ({ transparent = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const session = useSelector((state) => state.session);
 
+
+function Header({ isMenuVisible, onMenuToggle, isMenuDisabled = false }) {
   return (
     <header
       className={classNames(styles.header, {
@@ -35,76 +38,37 @@ const Header = ({ transparent = false }) => {
           <img className={styles.logoIcon} src={logoFull} />
         </Link>
 
-        <div
-          className={classNames(styles.block, {
-            [styles.blockDisabled]: !session.sessionKey,
+        <button
+          className={classNames(styles.notification, {
+            [styles.notification_disabled]: isMenuVisible || isMenuDisabled,
           })}
         >
-          <button className={styles.notification}>
-            <img className={styles.notificationIcon} src={notification} />
-            <div className={styles.notificationCounter}>1</div>
-          </button>
-          <button
-            className={styles.openMenu}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <img className={styles.openMenuIcon} src={menu} />
-          </button>
-        </div>
-        <div
-          className={classNames(styles.modal, {
-            [styles.modal_active]: isOpen,
-          })}
-        >
-          <div className={styles.modalHead}>
-            <Link className={styles.modalHeadLogo} to={"/"}>
-              <img className={styles.modalHeadLogoIcon} src={logoFull} />
-            </Link>
-            <button
-              className={styles.closeMenu}
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <img className={styles.closeMenuIcon} src={close} />
-            </button>
-          </div>
+          <img className={styles.notificationIcon} src={notification} />
+          <div className={styles.notificationCounter}>1</div>
+        </button>
 
-          <ul className={styles.modalMenu}>
-            <li className={styles.modalMenuItem}>
-              <Link className={styles.modalMenuButton} to="/">
-                <img className={styles.modalMenuButtonIcon} src={home} />
-                Home
-              </Link>
-            </li>
-            <li className={styles.modalMenuItem}>
-              <Link className={styles.modalMenuButton} to="/escape">
-                <img className={styles.modalMenuButtonIcon} src={expedition} />
-                YOUR EXPEDITION
-              </Link>
-            </li>
-            <li className={styles.modalMenuItem}>
-              <Link className={styles.modalMenuButton}>
-                <img className={styles.modalMenuButtonIcon} src={details} />
-                GUEST DETAILS
-              </Link>
-            </li>
-            <li className={styles.modalMenuItem}>
-              <Link className={styles.modalMenuButton}>
-                <img className={styles.modalMenuButtonIcon} src={sailing} />
-                ENHANCED SAILING
-              </Link>
-            </li>
-          </ul>
+        <>
+          <SvgButton
+            icon="menu"
+            onClick={onMenuToggle}
+            className={classNames(styles.menuIcon, {
+              [styles.menuIcon_visible]: !isMenuVisible,
+              [styles.menuIcon_disabled]: isMenuDisabled,
+            })}
+          />
 
-          <div className={styles.logout}>
-            <button className={styles.logoutButton}>
-              <img className={styles.logoutButtonIcon} src={logout} />
-              Logout
-            </button>
-          </div>
-        </div>
+          <SvgButton
+            icon="close"
+            onClick={onMenuToggle}
+            className={classNames(styles.menuIcon, {
+              [styles.menuIcon_visible]: isMenuVisible,
+              [styles.menuIcon_disabled]: isMenuDisabled,
+            })}
+          />
+        </>
       </div>
     </header>
   );
-};
+}
 
 export default Header;

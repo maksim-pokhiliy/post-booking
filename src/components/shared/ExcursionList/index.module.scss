@@ -1,0 +1,61 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+
+  @include laptop {
+    gap: 18px;
+  }
+}
+
+.item {
+  width: calc((100% - 14px) / 2);
+
+  @include laptop {
+    width: calc((100% - 36px) / 3);
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  @include tablet {
+    max-height: 223px;
+  }
+
+  @include laptop {
+    max-height: 223px;
+  }
+}
+
+.excursion {
+  background: $light-cream;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 7px 12px;
+
+  color: $background-dark;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.title {
+  color: $background-dark;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 16px;
+}

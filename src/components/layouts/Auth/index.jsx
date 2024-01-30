@@ -5,7 +5,8 @@ import logo from "../../../assets/icons/logo.png";
 function AuthLayout({ children }) {
   return (
     <main className={styles.block}>
-      <Header transparent />
+      <Header isMenuDisabled={true} />
+
       <div className={styles.hero}></div>
       <section className={styles.container}>{children}</section>
 
