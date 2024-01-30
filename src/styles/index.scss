@@ -43,7 +43,8 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+a {
   font-family: "Montserrat";
   margin-block-start: 0;
   margin-block-end: 0;
@@ -85,5 +86,5 @@ a {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: $background-light;
+  background-color: $white;
 }

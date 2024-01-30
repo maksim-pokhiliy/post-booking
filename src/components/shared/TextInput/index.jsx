@@ -9,18 +9,20 @@ const TextInput = ({
   value = "",
   setInput = () => {},
   theme = "",
+  required = false,
 }) => {
   return (
     <label className={styles.label} style={{ marginTop: title ? 55 : 22 }}>
-      {title && 
+      {title && (
         <p
           className={classNames(styles.title, {
             [styles.titleLight]: theme === "light",
           })}
         >
           {title}
+          {required && <span className={styles.required}>*</span>}
         </p>
-      }
+      )}
 
       <input
         value={value}

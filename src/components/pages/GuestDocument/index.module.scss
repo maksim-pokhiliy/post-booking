@@ -1,0 +1,135 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @include main-layout-adaptive-container;
+
+  @include laptop {
+    padding-top: 100px;
+  }
+
+  @include desktop {
+    padding-top: 100px;
+  }
+}
+
+.title {
+  color: $background-dark;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.back {
+  display: block;
+  color: $teal;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 23px;
+  margin-top: 5px;
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.second {
+  color: $dark-blue;
+  font-size: 23px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+.info {
+  border: 2px solid $teal;
+  padding: 27px 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  margin-top: 20px;
+
+  @include laptop {
+    max-width: 404px;
+  }
+
+  &Item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Title {
+    color: $background-dark;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  &Value {
+    color: $light;
+    text-align: right;
+    font-family: "Poppins";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+}
+
+.add {
+  margin-top: 80px;
+
+  &Title {
+    color: $dark-blue;
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+}
+
+.formText {
+  color: $text-silver;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.grid {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 20px;
+  }
+
+  @include laptop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px 20px;
+  }
+}
+
+.firstItem {
+  @include mobile-base {
+    display: none;
+  }
+
+  @include tablet {
+    display: block;
+  }
+
+  @include laptop {
+    display: none;
+  }
+}

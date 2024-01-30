@@ -1,0 +1,96 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: $background-dark;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.required {
+  color: $red;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.select {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+
+  &Value {
+    padding: 19px 16px;
+    border: 1px solid $border-silver;
+    background: $white;
+
+    color: $text-placeholder;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+
+    &_active {
+      border: 1px solid $red;
+    }
+  }
+
+  &Thoomb {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background: $white;
+    z-index: 2;
+    border: 1px solid $border-silver;
+    border-top: none;
+    max-height: 124px;
+    overflow-y: auto;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &Item {
+    text-align: left;
+    padding: 19px 16px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $border-silver;
+    }
+
+    &Text {
+      color: $text-placeholder;
+      font-family: Montserrat;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 23px;
+    }
+  }
+}
+
+.error {
+  position: absolute;
+  top: 100%;
+  color: $red;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+}

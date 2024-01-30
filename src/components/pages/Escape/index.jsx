@@ -8,10 +8,8 @@ import ExpeditionHead from "./molecules/ExpeditionHead";
 import polarIcon from "../../../assets/icons/polar-expeditions.svg";
 import cabins1 from "../../../assets/images/cabins/image-1.jpg";
 import cabins2 from "../../../assets/images/cabins/image-2.jpg";
-import sailing1 from "../../../assets/images/sailing/image-1.jpg";
-import sailing2 from "../../../assets/images/sailing/image-2.jpg";
-import sailing3 from "../../../assets/images/sailing/image-3.jpg";
-import sailing4 from "../../../assets/images/sailing/image-4.jpg";
+import CustomGuestList from "../../shared/CustomGuestList";
+import ExcursionList from "../../shared/ExcursionList";
 
 const Escape = () => {
   const navigation = useNavigate();
@@ -66,22 +64,7 @@ const Escape = () => {
                 <img className={styles.cabinsImg} src={cabins1} />
                 <div className={styles.cabinsSuite}>NAVIGATOR SUITE: 3421</div>
               </div>
-              <div className={styles.cabinsGuest}>
-                <div className={styles.cabinsGuestItem}>
-                  <div className={styles.cabinsGuestBlock}>
-                    <p className={styles.cabinsGuestName}>Mr B. Dickenson</p>
-                    <p className={styles.cabinsGuestDate}>03/03/1958</p>
-                  </div>
-                  <Link className={styles.cabinsGuestEdit}>Edit</Link>
-                </div>
-                <div className={styles.cabinsGuestItem}>
-                  <div className={styles.cabinsGuestBlock}>
-                    <p className={styles.cabinsGuestName}>Mr B. Dickenson</p>
-                    <p className={styles.cabinsGuestDate}>03/03/1958</p>
-                  </div>
-                  <Link className={styles.cabinsGuestEdit}>Edit</Link>
-                </div>
-              </div>
+              <CustomGuestList />
             </div>
             <div className={styles.cabinsItem}>
               <div className={styles.cabinsImage}>
@@ -139,45 +122,7 @@ const Escape = () => {
         <div className={styles.sailing}>
           <p className={styles.sailingTitle}>ENHANCED SAILING</p>
           <p className={styles.sailingSecond}>Booked experiences</p>
-
-          <div className={styles.sailingList}>
-            <div className={styles.sailingItem}>
-              <div className={styles.sailingImage}>
-                <img className={styles.sailingImg} src={sailing1} />
-                <div className={styles.sailingExcursion}>EXCURSION</div>
-              </div>
-              <p className={styles.sailingTitle}>
-                Escorted sightseeing safaris by Zodiac
-              </p>
-            </div>
-            <div className={styles.sailingItem}>
-              <div className={styles.sailingImage}>
-                <img className={styles.sailingImg} src={sailing2} />
-                <div className={styles.sailingExcursion}>EXCURSION</div>
-              </div>
-              <p className={styles.sailingTitle}>
-                Escorted sightseeing safaris by Zodiac
-              </p>
-            </div>
-            <div className={styles.sailingItem}>
-              <div className={styles.sailingImage}>
-                <img className={styles.sailingImg} src={sailing3} />
-                <div className={styles.sailingExcursion}>EXCURSION</div>
-              </div>
-              <p className={styles.sailingTitle}>
-                Escorted sightseeing safaris by Zodiac
-              </p>
-            </div>
-            <div className={styles.sailingItem}>
-              <div className={styles.sailingImage}>
-                <img className={styles.sailingImg} src={sailing4} />
-                <div className={styles.sailingExcursion}>EXCURSION</div>
-              </div>
-              <p className={styles.sailingTitle}>
-                Escorted sightseeing safaris by Zodiac
-              </p>
-            </div>
-          </div>
+          <ExcursionList />
 
           <StandartButton
             text="VIEW ALL EXPERIENCES"
